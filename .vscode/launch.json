@@ -1,0 +1,16 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Attach to .NET 6 Debugger",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "Build: .NET 6 Debug",
+      "program": "${workspaceFolder}/bin/x64/Debug/net6.0/MinigameJam.dll",
+      "args": [],
+      "cwd": "${workspaceFolder}/bin/x64/Debug/net6.0",
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen"
+    }
+  ]
+}

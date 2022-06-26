@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <TargetName>MinigameJam</TargetName>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
+    <LangVersion>10.0</LangVersion>
+    <StartupObject>MinigameJam.Program</StartupObject>
+    <AssemblyName>MinigameJam</AssemblyName>
+    <RootNamespace>MinigameJam</RootNamespace>
+    <TargetLatestRuntimePatch>true</TargetLatestRuntimePatch>
+	<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <ApplicationIcon />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="Content\**\*.*">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <PropertyGroup>
+    <DefaultItemExcludes>$(DefaultItemExcludes);lib\**\*</DefaultItemExcludes>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="lib\MoonWorks\MoonWorks.csproj" />
+  </ItemGroup>
+
+  <Import Project=".\CopyMoonlibs.targets" />
+</Project>

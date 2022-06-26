@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32616.157
+MinimumVisualStudioVersion = 15.0.26124.0
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MinigameJam", "MinigameJam.csproj", "{6B4B4FB4-7B3F-48DF-93E3-5CB13B40C232}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "lib", "lib", "{CF32081C-0E63-434B-B4B6-9323960DF4FC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MoonWorks", "lib\MoonWorks\MoonWorks.csproj", "{9B5E31AB-7BF3-4631-A539-6AF7B2BFD83D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6B4B4FB4-7B3F-48DF-93E3-5CB13B40C232}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{6B4B4FB4-7B3F-48DF-93E3-5CB13B40C232}.Debug|x64.Build.0 = Debug|Any CPU
+		{6B4B4FB4-7B3F-48DF-93E3-5CB13B40C232}.Release|x64.ActiveCfg = Release|Any CPU
+		{6B4B4FB4-7B3F-48DF-93E3-5CB13B40C232}.Release|x64.Build.0 = Release|Any CPU
+		{9B5E31AB-7BF3-4631-A539-6AF7B2BFD83D}.Debug|x64.ActiveCfg = Debug|x64
+		{9B5E31AB-7BF3-4631-A539-6AF7B2BFD83D}.Debug|x64.Build.0 = Debug|x64
+		{9B5E31AB-7BF3-4631-A539-6AF7B2BFD83D}.Release|x64.ActiveCfg = Release|x64
+		{9B5E31AB-7BF3-4631-A539-6AF7B2BFD83D}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9B5E31AB-7BF3-4631-A539-6AF7B2BFD83D} = {CF32081C-0E63-434B-B4B6-9323960DF4FC}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {70247DA8-9C19-4FC5-B4BC-68E1262B9F4B}
+	EndGlobalSection
+EndGlobal

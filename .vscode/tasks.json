@@ -1,0 +1,118 @@
+{
+  "version": "2.0.0",
+  "options": {
+    "cwd": "${workspaceRoot}"
+  },
+  "windows": {
+    "options": {
+      "shell": {
+        "executable": "cmd.exe",
+        "args": [
+          "/d",
+          "/c"
+        ]
+      }
+    }
+  },
+  "presentation": {
+    "reveal": "always",
+    "focus": true,
+    "panel": "shared"
+  },
+  "tasks": [
+    {
+      "label": "Build & Run: .NET 6 Debug",
+      "type": "shell",
+      "dependsOrder": "sequence",
+      "dependsOn": [
+        "Build: .NET 6 Debug",
+        "Run: .NET 6 Debug"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Build: .NET 6 Debug",
+      "command": "dotnet",
+      "args": [
+        "build",
+        "./MinigameJam.csproj",
+        "-p:SolutionDir=${workspaceFolder}/",
+        "-p:Platform=x64"
+      ],
+      "type": "shell",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Run: .NET 6 Debug",
+      "command": "dotnet",
+      "args": [
+        "./MinigameJam.dll"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}/bin/x64/Debug/net6.0"
+      },
+      "type": "process",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Build: .NET 6 Release",
+      "command": "dotnet",
+      "args": [
+        "build",
+        "./MinigameJam.csproj",
+        "--configuration",
+        "Release",
+        "-p:SolutionDir=${workspaceFolder}/",
+        "-p:Platform=x64"
+      ],
+      "type": "shell",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Run: .NET 5 Release",
+      "command": "dotnet",
+      "args": [
+        "./MinigameJam.dll"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}/bin/x64/Release/net6.0"
+      },
+      "type": "process",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Build & Run: .NET 6 Release",
+      "dependsOrder": "sequence",
+      "dependsOn": [
+        "Build: .NET 6 Release",
+        "Run: .NET 6 Release"
+      ],
+      "type": "shell",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": []
+    }
+  ]
+}
